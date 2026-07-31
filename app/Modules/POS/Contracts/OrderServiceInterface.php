@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+declare(strict_types=1);
+
 namespace App\Modules\POS\Contracts;
 
 use App\Modules\POS\DTOs\CreateOrderDTO;
@@ -9,4 +12,5 @@ interface OrderServiceInterface
 {
     public function createOrder(CreateOrderDTO $dto): Order;
     public function getAllOrders(): Collection;
+    public function getPrderById(int $id): Order;
 }
